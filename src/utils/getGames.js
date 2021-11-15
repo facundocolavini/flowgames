@@ -11,13 +11,11 @@ export const fetchGames = () => {
                 setTimeout(() => {
                     resolve(response.json());
                 },2000)
-            
             }) 
             .catch(err =>{
                 console.log(err);
                 reject('Data not found')
             });
-
     });
 }
 
