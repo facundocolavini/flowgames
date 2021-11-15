@@ -5,17 +5,9 @@ import {baseurl, CONFIG} from "../utils/baseurl";
  
 const GAMES_ENDPOINT = baseurl('');
 
-/* const customFetch = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if(data) {
-                resolve(data);
-            } else {
-                reject('Error');
-            }
-        }, 2000);
-    });
-} */
+const customFetch = () => {
+   
+}
 
 /* export const getAulas= async () => {
     try {

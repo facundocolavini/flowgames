@@ -6,7 +6,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Routes,Route } from 'react-router-dom';
 import GlobalStyles, { Loading } from './glogalStyles';
 import { useEffect, useState ,React} from 'react';
-import fetchGames from './utils/fetchGames';
+import getGames from './utils/getGames';
 
 const theme = {
     colors: {
@@ -63,15 +63,30 @@ function App() {
     isError:false,
     erroMEssage:"Games not found..."
   });
+
+useEffect(()=>{
+  getGames()
+  .then(data=>{
+    setGames(data);
+  })
+  .catch(err => setError({
+    isError:true,
+    errorMessage:err
+  }));
+},[])
+
+
   //Component did mount
-  useEffect(() => {
+/*   useEffect(() => {
+  
       fetchGames()
       .then(result => setGames(result))
       .catch(err => setError({
           isError:true,
           errorMessage:err
-    }));
-  },[]);
+      }));
+  },[]); */
+
 
   return (
     <ThemeProvider theme={theme}>

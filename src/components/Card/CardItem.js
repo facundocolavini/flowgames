@@ -3,7 +3,8 @@ import {Card,CardBody,ImageItem,TitleItem,ButtonItem} from './CardItem.style'
 
 
 const CardItem = ({games}) => {
-    console.log(games,'from card item')
+
+
     return (
         <>
             {   
