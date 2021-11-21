@@ -11,10 +11,14 @@ const GlobalStyles = createGlobalStyle`
     body,html{
         font-size: 18px;
         font-family: 'DM Sans', sans-serif;
+     
         margin:0;
+        padding:0;
         background-color:${({ theme }) => theme.colors.body};
         color: ${({ theme }) => theme.fontColors.white};
         position: relative;
+        
+        height: 100vh;
 
     }
     p{
@@ -46,15 +50,17 @@ export const Container = styled.div`
 `;
 
 export const Loading = styled.img`
+    display:grid;
+    grid-column:1/4;
+    place-items:center;
     text-align: center;
     font-size:1.5rem;
     height:100vh;
+    width:100%;
     object-fit:contain;
     margin: 0 auto;
     width:150px;
-    display:flex;
+    justify-content:center;
     align-items:center;
-
-   
 `;
 export default GlobalStyles

@@ -17,7 +17,7 @@ const Navbar = () => {
                 </NavLink>
                 {isOpen ?<Close onClick={()=>clickHandler(!isOpen)}/>:<Bars onClick={()=>clickHandler(!isOpen)}/>} 
                 <NavMenu isOpen={isOpen}>
-                    <NavLink to="/profile">Profile</NavLink>
+                    {/* <NavLink to="/categories">Categories</NavLink> */}
                     <NavLink to="/cart" >Cart</NavLink>
                 </NavMenu>
             </NavContainer>

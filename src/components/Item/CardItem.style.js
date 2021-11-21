@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-/* import {Link} from 'react-router-dom'; */
+import {Link} from 'react-router-dom';
 
 export const Card = styled.div`
 
@@ -44,17 +44,17 @@ export const TitleItem = styled.h2`
    
 `;
 
-export const ButtonItem = styled.button`
+export const ButtonItem = styled(Link)`
 
     border:none;
     width: 155px;
-    height: 55px;
+    padding:.3em;
+    margin:0;
     color: ${({theme}) => theme.fontColors.white};
     font-size: ${({ theme }) => theme.fontSizesDesktop.regular.fontSize};
     font-style: ${({ theme }) => theme.fontSizesDesktop.regular.fontStyle};
     font-weight: ${({ theme }) => theme.fontSizesDesktop.regular.fontWeight};
     background: ${({ theme }) => theme.colors.background2};
     border-radius: 10px;
-
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;

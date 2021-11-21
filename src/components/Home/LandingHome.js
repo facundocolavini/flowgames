@@ -1,20 +1,16 @@
+import Navbar from "../Navbar/Navbar";
+import {BrowserRouter , Routes,Route} from 'react-router-dom';
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
-import {Container} from '../../glogalStyles';
-import {Title,WrapFlex} from './LandingHome.style';
-import ListItems from '../ListItems/ListItems';
-
-import {A} from './LandingHome.style';
-
-/* import {ContainerCards} from '../Container/Container.style'; */
-export const LandingHome = ({games}) => {
-
+export const LandingHome = () => {
     return (
-        <Container>
-            <WrapFlex>
-                <Title>JUEGOS</Title>
-                <A to="/cart">View More</A>
-            </WrapFlex>
-            <ListItems games={games}/>
-        </Container>
+        <BrowserRouter>
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/game/:idGame" element={<ItemDetailContainer/>}/>
+          </Routes>
+        </BrowserRouter>
     )
 }

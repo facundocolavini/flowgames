@@ -1,18 +1,15 @@
 import {ThemeProvider} from 'styled-components';
-import loading from './assets/images/loading.gif';
-import Navbar from "./components/Navbar/Navbar";
 import { LandingHome } from './components/Home/LandingHome';
-import {BrowserRouter as Router} from 'react-router-dom';
-import {Routes,Route } from 'react-router-dom';
-import GlobalStyles, { Loading } from './glogalStyles';
-import { useEffect, useState ,React} from 'react';
-import getGames from './utils/getGames';
+import GlobalStyles from './glogalStyles';
+import React from 'react';
+
 
 const theme = {
     colors: {
       body:'#121212',
       background1:'#2A2A2A',
-      background2:'#0078F2'
+      background2: '#133AC3',
+      background3:'#2F3135'
     },
     fontColors: {
       white:'#FFFFFF',
@@ -49,7 +46,8 @@ const theme = {
       md:"991px"
     },
     gradients:{
-      gradientCard:"linear-gradient(0deg, rgba(0, 0, 0, 0.8) 40.04%, rgba(0, 0, 0, 0) 100%)"
+      gradientCard:"linear-gradient(0deg, rgba(0, 0, 0, 0.8) 40.04%, rgba(0, 0, 0, 0) 100%)",
+      overlayImage:"180deg, rgba(18, 18, 18, 0) 1.01%, rgba(18, 18, 18, 0) 1.02%, rgba(12, 12, 12, 0.49) 1.03%, #050404 55.7%",
     },
 
 }
@@ -58,49 +56,13 @@ const theme = {
 
 
 function App() {
-  const [games, setGames] = useState([]);
-  const [error ,setError] = useState({
-    isError:false,
-    erroMEssage:"Games not found..."
-  });
 
-useEffect(()=>{
-  getGames()
-  .then(data=>{
-    setGames(data);
-  })
-  .catch(err => setError({
-    isError:true,
-    errorMessage:err
-  }));
-},[])
-
-
-  //Component did mount
-/*   useEffect(() => {
-  
-      fetchGames()
-      .then(result => setGames(result))
-      .catch(err => setError({
-          isError:true,
-          errorMessage:err
-      }));
-  },[]); */
-
+ 
 
   return (
     <ThemeProvider theme={theme}>
-    <Router>
       <GlobalStyles/>
-      <Navbar/>     
-      {/* Home */}
-      <Routes>
-        <Route path="/" exact element={
-          error.isError ?  <Loading src={loading}/> : <LandingHome games={games}/> 
-   
-        } />
-      </Routes>
-    </Router>
+      <LandingHome/>
     </ThemeProvider>  
   );
 }

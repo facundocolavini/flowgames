@@ -6,19 +6,22 @@ import {Container} from '../../glogalStyles'
 
 export const Nav = styled.nav`
     background: ${({theme}) => theme.colors.body};
-    height:80px;
+   
     display:flex;
+    position:relative;
+
     justify-content:space-between;
     align-items:center;
-    position:sticky;
+    bottom:0;
+    background: transparent;
     top:0;
     z-index:999;
-
 `
 export const NavContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     align-items:center;
+
     height:80px;
     ${Container}
 `
