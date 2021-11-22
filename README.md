@@ -1,4 +1,4 @@
-## Flow Games! Tienda online de videojuegos 
+## Flow Games! Tienda de videojuegos 
 
    Realizo una tienda online con el tema videojuegos donde vamos a poder comprar muchas variedades de juegos y de distintas plataformas. 
 
