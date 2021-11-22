@@ -1,6 +1,9 @@
 const data = [
     {
+      "description":"Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.",
       "id": 3498,
+      "stock":10,
+      "price":49,
       "slug": "grand-theft-auto-v",
       "name": "Grand Theft Auto V",
       "released": "2013-09-17",
@@ -186,22 +189,15 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
           "slug": "action",
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
-        {
-          "id": 3,
-          "name": "Adventure",
-          "slug": "adventure",
-          "games_count": 98194,
-          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
         }
-      ],
+      ,
       "stores": [
         {
           "id": 290375,
@@ -452,6 +448,9 @@ const data = [
     },
     {
       "id": 3328,
+      "stock":20,
+      "price":30,
+      "description":"Mientras la guerra se extiende por los Reinos del Norte, aceptarás el contrato de tu vida: encontrar a la niña de la profecía, un arma viviente que puede alterar el mundo tal y como lo conocemos.",
       "slug": "the-witcher-3-wild-hunt",
       "name": "The Witcher 3: Wild Hunt",
       "released": "2015-05-18",
@@ -596,29 +595,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
           "slug": "adventure",
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
-        },
-        {
-          "id": 5,
-          "name": "RPG",
-          "slug": "role-playing-games-rpg",
-          "games_count": 40449,
-          "image_background": "https://media.rawg.io/media/games/3cf/3cff89996570cf29a10eb9cd967dcf73.jpg"
-        }
-      ],
+        }, 
       "stores": [
         {
           "id": 676022,
@@ -877,6 +861,9 @@ const data = [
     },
     {
       "id": 4200,
+      "stock":26,
+      "price":25,
+      "description":"¡La Iniciativa de Prueba Perpetua ha sido ampliada, permitiéndote ahora diseñar puzles cooperativos para ti y tus amigos!",
       "slug": "portal-2",
       "name": "Portal 2",
       "released": "2011-04-18",
@@ -1061,7 +1048,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 2,
           "name": "Shooter",
@@ -1069,14 +1056,6 @@ const data = [
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
         },
-        {
-          "id": 7,
-          "name": "Puzzle",
-          "slug": "puzzle",
-          "games_count": 74757,
-          "image_background": "https://media.rawg.io/media/games/6fc/6fcb1c529c764700d55f3bbc1b0fbb5b.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 465889,
@@ -1364,6 +1343,9 @@ const data = [
     },
     {
       "id": 5286,
+      "stock":50,
+      "price":10,
+      "description":"Tomb Raider relata la historia del origen de Lara Croft y su transformación de una joven chica a una endurecida superviviente.",
       "slug": "tomb-raider",
       "name": "Tomb Raider (2013)",
       "released": "2013-03-05",
@@ -1545,22 +1527,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
           "slug": "adventure",
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 33824,
@@ -1803,6 +1777,9 @@ const data = [
     },
     {
       "id": 5679,
+      "stock":4,
+      "price":15,
+      "description":"Skyrim Special Edition, ganador de más de 200 premios al Juego del año, da vida a la fantasía épica con un nivel de detalle asombroso. La Special Edition incluye el juego aclamado por la crítica y los complementos, así como nuevas características: gráficos y efectos renovados, rayos crepusculares ",
       "slug": "the-elder-scrolls-v-skyrim",
       "name": "The Elder Scrolls V: Skyrim",
       "released": "2011-11-11",
@@ -1953,7 +1930,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -1961,14 +1938,6 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 5,
-          "name": "RPG",
-          "slug": "role-playing-games-rpg",
-          "games_count": 40449,
-          "image_background": "https://media.rawg.io/media/games/3cf/3cff89996570cf29a10eb9cd967dcf73.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 6037,
@@ -2248,6 +2217,9 @@ const data = [
     },
     {
       "id": 12020,
+      "stock":10,
+      "price":5,
+      "description":"Ambientado en el apocalipsis zombi, Left 4 Dead 2 (L4D2) es la esperadísima secuela del galardonado Left 4 Dead, el juego cooperativo número 1 de 2008. Este FPS cooperativo de acción y terror os llevará a ti y a tus amigos por las ciudades, pantanos y cementerios del Sur Profundo, desde Savannah",
       "slug": "left-4-dead-2",
       "name": "Left 4 Dead 2",
       "released": "2009-11-17",
@@ -2354,22 +2326,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 2,
           "name": "Shooter",
           "slug": "shooter",
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 13208,
@@ -2659,6 +2623,9 @@ const data = [
     },
     {
       "id": 4291,
+      "stock":6,
+      "price":9,
+      "description":"Counter-Strike: Global Offensive (CS:GO) amplía el juego de acción por equipos del que fue pionero cuando salió hace más de 20 años. CS:GO incluye nuevos mapas, personajes, armas y modos de juego, y ofrece versiones actualizadas del contenido clásico de Counter-Strike (de_dust2, etc.).",
       "slug": "counter-strike-global-offensive",
       "name": "Counter-Strike: Global Offensive",
       "released": "2012-08-21",
@@ -2786,7 +2753,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -2794,14 +2761,7 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 2,
-          "name": "Shooter",
-          "slug": "shooter",
-          "games_count": 44689,
-          "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
+      
       "stores": [
         {
           "id": 4619,
@@ -3070,6 +3030,9 @@ const data = [
     },
     {
       "id": 13536,
+      "stock":25,
+      "price":5,
+      "description":"Portal™ es la nueva aventura para un solo jugador de Valve. Ambientado en los misteriosos laboratorios de Aperture Science, Portal ha sido calificado como uno de los juegos más innovadores de los últimos tiempos y ofrece incontables horas de rompecabezas nunca vistos.",
       "slug": "portal",
       "name": "Portal",
       "released": "2007-10-09",
@@ -3267,7 +3230,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
@@ -3275,14 +3238,7 @@ const data = [
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
         },
-        {
-          "id": 7,
-          "name": "Puzzle",
-          "slug": "puzzle",
-          "games_count": 74757,
-          "image_background": "https://media.rawg.io/media/games/6fc/6fcb1c529c764700d55f3bbc1b0fbb5b.jpg"
-        }
-      ],
+
       "stores": [
         {
           "id": 14890,
@@ -3516,6 +3472,9 @@ const data = [
     },
     {
       "id": 802,
+      "stock":35,
+      "price":10,
+      "description":"The Ultimate Vault Hunter’s Upgrade lets you get the most out of the Borderlands 2 experience.",
       "slug": "borderlands-2",
       "name": "Borderlands 2",
       "released": "2012-09-18",
@@ -3696,14 +3655,7 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 2,
           "name": "Shooter",
@@ -3711,14 +3663,6 @@ const data = [
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
         },
-        {
-          "id": 5,
-          "name": "RPG",
-          "slug": "role-playing-games-rpg",
-          "games_count": 40449,
-          "image_background": "https://media.rawg.io/media/games/3cf/3cff89996570cf29a10eb9cd967dcf73.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 4000,
@@ -4004,6 +3948,9 @@ const data = [
     },
     {
       "id": 4062,
+      "stock":10,
+      "price":5,
+      "description":"Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.",
       "slug": "bioshock-infinite",
       "name": "BioShock Infinite",
       "released": "2013-03-26",
@@ -4206,7 +4153,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -4214,14 +4161,6 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 2,
-          "name": "Shooter",
-          "slug": "shooter",
-          "games_count": 44689,
-          "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 71727,
@@ -4499,6 +4438,9 @@ const data = [
     },
     {
       "id": 3439,
+      "stock":5,
+      "price":10,
+      "description":"Primer episodio gratis! Life Is Strange es una aventura por episodios premiada y elogiada por la crítica que te permite retroceder en el tiempo y cambiar el pasado, el presente y el futuro.",
       "slug": "life-is-strange-episode-1-2",
       "name": "Life is Strange",
       "released": "2015-01-29",
@@ -4743,15 +4685,14 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
           "slug": "adventure",
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 451321,
@@ -5064,6 +5005,9 @@ const data = [
     },
     {
       "id": 28,
+      "stock":4,
+      "price":14,
+      "description":"Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online.",
       "slug": "red-dead-redemption-2",
       "name": "Red Dead Redemption 2",
       "released": "2018-10-26",
@@ -5189,22 +5133,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
           "slug": "adventure",
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 257732,
@@ -5556,6 +5492,9 @@ const data = [
     },
     {
       "id": 4286,
+      "stock":6,
+      "price":2,
+      "description":"BioShock es un shooter único, repleto de armas y tácticas nunca vistas. Tendrás a tu disposición un variado arsenal, desde simples revólveres hasta lanzagranadas o lanzadores químicos, pero también tendrás que modificar tu ADN para crear un arma todavía más mortífera: tú.",
       "slug": "bioshock",
       "name": "BioShock",
       "released": "2007-08-21",
@@ -5758,22 +5697,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres":
         {
           "id": 2,
           "name": "Shooter",
           "slug": "shooter",
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 4614,
@@ -6016,6 +5947,9 @@ const data = [
     },
     {
       "id": 13537,
+      "stock":10,
+      "price":5,
+      "description":"1998. HALF-LIFE supone un impacto en la industria de juegos con su combinación de acción frenética y narración continua y absorbente. El título de debut de Valve fue galardonado con más de 50 premios que lo consideraron el juego del año hasta convertirse en el mejor juego para PC de la historia" ,
       "slug": "half-life-2",
       "name": "Half-Life 2",
       "released": "2004-11-16",
@@ -6202,7 +6136,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -6210,14 +6144,6 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 2,
-          "name": "Shooter",
-          "slug": "shooter",
-          "games_count": 44689,
-          "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 14891,
@@ -6467,8 +6393,11 @@ const data = [
     },
     {
       "id": 1030,
+      "stock":7,
+      "price":10,
       "slug": "limbo",
       "name": "Limbo",
+      "description":"Dudoso sobre el destino de su hermana, un niño entra en LIMBO",
       "released": "2010-07-21",
       "tba": false,
       "background_image": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg",
@@ -6757,7 +6686,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
@@ -6765,28 +6694,6 @@ const data = [
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
         },
-        {
-          "id": 51,
-          "name": "Indie",
-          "slug": "indie",
-          "games_count": 40360,
-          "image_background": "https://media.rawg.io/media/games/d5a/d5a24f9f71315427fa6e966fdd98dfa6.jpg"
-        },
-        {
-          "id": 7,
-          "name": "Puzzle",
-          "slug": "puzzle",
-          "games_count": 74757,
-          "image_background": "https://media.rawg.io/media/games/6fc/6fcb1c529c764700d55f3bbc1b0fbb5b.jpg"
-        },
-        {
-          "id": 83,
-          "name": "Platformer",
-          "slug": "platformer",
-          "games_count": 72876,
-          "image_background": "https://media.rawg.io/media/games/fc8/fc838d98c9b944e6a15176eabf40bee8.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 1054,
@@ -7057,6 +6964,9 @@ const data = [
     },
     {
       "id": 2454,
+      "stock":30,
+      "price":20,
+      "description":"Ahora incluye los tres paquetes de contenido descargable premium (Unto the Evil-Hell Followed-Bloodfall), mapas, modos y armas, así como todas las actualizaciones de funcionalidades, como el modo Arcade, el modo Foto y la actualización 6.66, la más reciente, que trae más mejoras multijugador.",
       "slug": "doom",
       "name": "DOOM (2016)",
       "released": "2016-05-13",
@@ -7207,7 +7117,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -7215,14 +7125,6 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 2,
-          "name": "Shooter",
-          "slug": "shooter",
-          "games_count": 44689,
-          "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 355582,
@@ -7470,6 +7372,9 @@ const data = [
     },
     {
       "id": 3070,
+      "stock":16,
+      "price":40,
+      "description":"Bethesda Game Studios, el galardonado creador de Fallout 3 y The Elder Scrolls V: Skyrim, os da la bienvenida al mundo de Fallout 4, su juego más ambicioso hasta la fecha y la siguiente generación de mundos abiertos.",
       "slug": "fallout-4",
       "name": "Fallout 4",
       "released": "2015-11-09",
@@ -7595,7 +7500,7 @@ const data = [
           }
         }
       ],
-      "genres": [
+      "genres": 
         {
           "id": 4,
           "name": "Action",
@@ -7603,14 +7508,7 @@ const data = [
           "games_count": 132653,
           "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
         },
-        {
-          "id": 5,
-          "name": "RPG",
-          "slug": "role-playing-games-rpg",
-          "games_count": 40449,
-          "image_background": "https://media.rawg.io/media/games/3cf/3cff89996570cf29a10eb9cd967dcf73.jpg"
-        }
-      ],
+
       "stores": [
         {
           "id": 3252,
@@ -7839,6 +7737,9 @@ const data = [
     },
     {
       "id": 11859,
+      "stock":22,
+      "price":19,
+      "description":"Nueve clases diferentes ofrecen una amplia variedad de habilidades tácticas y personalidades. Constantemente actualizado con nuevos modos de juego, mapas, equipamiento y, lo que es más importante, ¡sombreros!",
       "slug": "team-fortress-2",
       "name": "Team Fortress 2",
       "released": "2007-10-10",
@@ -7971,22 +7872,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres": 
         {
           "id": 2,
           "name": "Shooter",
           "slug": "shooter",
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 13018,
@@ -8281,6 +8174,9 @@ const data = [
     },
     {
       "id": 32,
+      "stock":3,
+      "price":12,
+      "description":"Destiny 2 es un MMO de acción con un mundo único y dinámico al que tus amigos y tú os podéis unir en cualquier momento y desde cualquier lugar de forma totalmente gratuita.",
       "slug": "destiny-2",
       "name": "Destiny 2",
       "released": "2017-09-06",
@@ -8455,21 +8351,7 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
-        {
-          "id": 2,
-          "name": "Shooter",
-          "slug": "shooter",
-          "games_count": 44689,
-          "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        },
+      "genres": 
         {
           "id": 3,
           "name": "Adventure",
@@ -8477,14 +8359,6 @@ const data = [
           "games_count": 98194,
           "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
         },
-        {
-          "id": 59,
-          "name": "Massively Multiplayer",
-          "slug": "massively-multiplayer",
-          "games_count": 2641,
-          "image_background": "https://media.rawg.io/media/games/786/7863e587bac630de82fca50d799236a9.jpg"
-        }
-      ],
       "stores": [
         {
           "id": 32,
@@ -8905,6 +8779,9 @@ const data = [
     },
     {
       "id": 3939,
+      "stock":8,
+      "price":5,
+      "description":"PAYDAY 2 es un juego de acción cooperativo para cuatro jugadores que, una vez más, permite a los jugadores ponerse en la piel del equipo original de PAYDAY - Dallas, Hoxton, Wolf y Chains - mientras descienden por Washington DC en una épica ola de crímenes.",
       "slug": "payday-2",
       "name": "PAYDAY 2",
       "released": "2013-08-13",
@@ -9030,22 +8907,14 @@ const data = [
           }
         }
       ],
-      "genres": [
-        {
-          "id": 4,
-          "name": "Action",
-          "slug": "action",
-          "games_count": 132653,
-          "image_background": "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
-        },
+      "genres":
         {
           "id": 2,
           "name": "Shooter",
           "slug": "shooter",
           "games_count": 44689,
           "image_background": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg"
-        }
-      ],
+        },
       "stores": [
         {
           "id": 4258,

@@ -1,14 +1,27 @@
 import { baseurl,CONFIG } from "./baseUrl";
-
 const {KEY,PAGE,PAGE_SIZE} = CONFIG;
 const ENPOINT_GAMES = baseurl('games');
+const GENRE_GAMES = baseurl('genres');
 
-
-
+/* CONSULTAS A LA API*/
 
 export const fetchGames = (time) => {
     return new Promise((resolve, reject) => {
         fetch(`${ENPOINT_GAMES}?${KEY}`)
+            .then(response => {
+                setTimeout(() => {
+                    resolve(response);
+                },time)
+            }) 
+            .catch(err =>{
+                console.log(err);
+                reject('Data not found')
+            });
+    });
+}
+export const genreGames = (time,idGenre) => {
+    return new Promise((resolve, reject) => {
+        fetch(`${ENPOINT_GAMES}/${idGenre}?${KEY}`)
             .then(response => {
                 setTimeout(() => {
                     resolve(response);

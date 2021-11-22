@@ -209,7 +209,7 @@ export const About = styled.div`
 
 export const Description = styled.div`
     font-weight: normal;
-    font-size: 16px;
+    font-size: 26px;
     margin-bottom:1em;
 
     height: 35%;

@@ -13,7 +13,7 @@ const CardItem = ({id,name,image,price}) => {
                     <CardBody>
                         <TitleItem>{name}</TitleItem>
                         <TitleItem>${price}</TitleItem>
-                        <ButtonItem  to={`/game/${id}`} id={id} type="button">BUY NOW</ButtonItem>
+                        <ButtonItem  to={`/item/${id}`} id={id} type="button">BUY NOW</ButtonItem>
                     </CardBody>
                 </Card> 
             } 

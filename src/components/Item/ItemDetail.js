@@ -1,21 +1,20 @@
 import React from 'react'
-import {GridGalleryDetails,ContentInfoR,ContentInfo,FlexPrice,FlexPublisher,FlexDeveloper,Description,About,GridInfoDetail,InfoItem,Gallery,ImgGalleryItem,ImgPrimary,ScoreTitle,RaitingTitle,FlexRaiting,FlexTitle,FlexDate,PlatformItem,TitleItem,DateItem,ContainerImage,ContainerDetailItem,Column1,Column2} from '../ItemDetailContainer/ItemDetailContainer.style';
+import {GridGalleryDetails,ContentInfoR,ContentInfo,FlexPrice,Description,About,GridInfoDetail,InfoItem,Gallery,ImgGalleryItem,ImgPrimary,ScoreTitle,RaitingTitle,FlexRaiting,FlexTitle,FlexDate,PlatformItem,TitleItem,DateItem,ContainerImage,ContainerDetailItem,Column1,Column2} from '../ItemDetailContainer/ItemDetailContainer.style';
 import ItemCount from '../ItemCount/ItemCount';
 /* import backgroundImage from '../../assets/images/game.png'; */
 import  loading from '../../assets/images/loading.gif';
 import {Loading} from '../../glogalStyles';
 const ItemDetail = ({item}) => {
-    console.log(item.short_screenshots);
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+    console.log(item,'item');
+    const onAdd = (q) => {
+        alert("You selected " + q + " items.");
     }
     return (
         <>
         {       
-            item && item.background_image?
+            item && item.name ?
              <ContainerImage backImg={item.background_image} alt="asdsa">  
              <ContainerDetailItem>
-                 {/* ESTO VA ADENTRO DE ITEM DETAIL  */}
                  <Column1>
                      <GridGalleryDetails>
                         <FlexDate>
@@ -26,12 +25,12 @@ const ItemDetail = ({item}) => {
                              <TitleItem>{item.name}</TitleItem>
                          </FlexTitle>
                          {/* Reemplazar con slider a futuro */}
-                         <ImgPrimary src={item.background_image_additional}/>
+                         <ImgPrimary src={item.short_screenshots[1].image}/>
                          <Gallery>
 
-                             <ImgGalleryItem src={item.background_image_additional}/>
-                             <ImgGalleryItem src={item.background_image_additional}/>
-                             <ImgGalleryItem src={item.background_image_additional}/>
+                             <ImgGalleryItem src={item.short_screenshots[2].image}/>
+                             <ImgGalleryItem src={item.short_screenshots[3].image}/>
+                             <ImgGalleryItem src={item.short_screenshots[4].image}/>
                          </Gallery>
                      </GridGalleryDetails>
                  </Column1>
@@ -46,8 +45,8 @@ const ItemDetail = ({item}) => {
                  </FlexRaiting>
                  <InfoItem>
                      <About>About</About>
-                     <Description>{item.description_raw}</Description>
-                     <FlexDeveloper>
+                     <Description>{item.description}</Description>
+{/*                      <FlexDeveloper>
                          <ContentInfo>Developer</ContentInfo>
                         {
                              item.developers.lenght > 0
@@ -63,13 +62,12 @@ const ItemDetail = ({item}) => {
                              :item.publishers.map(publisher=><ContentInfoR key={publisher.id}>{publisher.name}</ContentInfoR>)
                         }
 
-                     </FlexPublisher>
+                     </FlexPublisher> */}
                      <FlexPrice>
                          <ContentInfo>Price</ContentInfo>
                          <ContentInfoR>${item.price}</ContentInfoR>
                      </FlexPrice>
                      <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
-
                  </InfoItem>
                  </GridInfoDetail>
                 </Column2>
@@ -77,7 +75,6 @@ const ItemDetail = ({item}) => {
         </ContainerImage> 
         :<Loading src={loading}></Loading>
         }
-       
         </>
     )
 }

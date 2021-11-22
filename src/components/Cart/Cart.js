@@ -3,7 +3,8 @@ import {Container} from '../../glogalStyles';
 const Cart = () => {
     return (
         <Container>
-            <h1>My Cart</h1>
+            <h1 style={{color:"white"}}>My Cart</h1>
+
         </Container>
     )
 }
