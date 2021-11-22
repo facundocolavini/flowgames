@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const Card = styled.div`
 
-   position: relative;
+    position: relative;
     width:100%;
     height:20rem;
     border-radius: 10px;
@@ -11,19 +11,19 @@ export const Card = styled.div`
 `;
 
 export const CardBody = styled.div`
-position:absolute;
-top:0;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-align-items:space-around;
-padding:1em;
-padding-left: 30px;
-padding-bottom: 2em;
-width:100%;
-height:100%;
-z-index:1;
- background:${({theme}) => theme.gradients.gradientCard};
+    position:absolute;
+    top:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:space-around;
+    padding:1em;
+    padding-left: 30px;
+    padding-bottom: 2em;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background:${({theme}) => theme.gradients.gradientCard};
 
 `;
 

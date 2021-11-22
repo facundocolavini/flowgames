@@ -3,8 +3,6 @@ import {Card,CardBody,ImageItem,TitleItem,ButtonItem} from './CardItem.style'
 
 
 const CardItem = ({id,name,image,price}) => {
-
-
     return (
         <>
             {   

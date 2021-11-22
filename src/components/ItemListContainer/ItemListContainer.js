@@ -18,13 +18,12 @@ const ItemListContainer = () => {
         }))
             .then(result => setGames(result))
             .catch(err => console.log(err))
-    }, [allGames, idGenre]);
+    }, [allGames]);
 
     return (
         <Container>
             <WrapFlex>
             <Title>Home Games</Title>
-            {/* <A to="/categories">View More</A> */}
             </WrapFlex>
             <ItemList items={allGames}/>
         </Container>

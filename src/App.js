@@ -52,12 +52,7 @@ const theme = {
 
 }
 
-
-
-
 function App() {
-
- 
 
   return (
     <ThemeProvider theme={theme}>
@@ -65,6 +60,7 @@ function App() {
       <LandingHome/>
     </ThemeProvider>  
   );
+  
 }
 
 export default App;

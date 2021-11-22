@@ -4,8 +4,6 @@ import CardItem from '../Item/CardItem';
 import {Loading} from '../../glogalStyles';
 import  loading from '../../assets/images/loading.gif';
 const ItemsList = ({items}) => {
-    console.log(items)
-    
     return (
         <ContainerList>
             {

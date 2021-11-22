@@ -5,9 +5,8 @@ import ItemCount from '../ItemCount/ItemCount';
 import  loading from '../../assets/images/loading.gif';
 import {Loading} from '../../glogalStyles';
 const ItemDetail = ({item}) => {
-    console.log(item,'item');
     const onAdd = (q) => {
-        alert("You selected " + q + " items.");
+        alert("You selected " + q + " games.");
     }
     return (
         <>
@@ -15,37 +14,37 @@ const ItemDetail = ({item}) => {
             item && item.name ?
              <ContainerImage backImg={item.background_image} alt="asdsa">  
              <ContainerDetailItem>
-                 <Column1>
-                     <GridGalleryDetails>
+                <Column1>
+                    <GridGalleryDetails>
                         <FlexDate>
                             <DateItem>{item.released}</DateItem>
                             {item.platforms.map(platform=><PlatformItem key={platform.platform.id} >|{platform.platform.name}|</PlatformItem>)}
                         </FlexDate>
-                         <FlexTitle>
-                             <TitleItem>{item.name}</TitleItem>
-                         </FlexTitle>
+                        <FlexTitle>
+                            <TitleItem>{item.name}</TitleItem>
+                        </FlexTitle>
                          {/* Reemplazar con slider a futuro */}
-                         <ImgPrimary src={item.short_screenshots[1].image}/>
-                         <Gallery>
+                        <ImgPrimary src={item.short_screenshots[1].image}/>
+                        <Gallery>
 
-                             <ImgGalleryItem src={item.short_screenshots[2].image}/>
-                             <ImgGalleryItem src={item.short_screenshots[3].image}/>
-                             <ImgGalleryItem src={item.short_screenshots[4].image}/>
-                         </Gallery>
-                     </GridGalleryDetails>
-                 </Column1>
-                 <Column2>
-                 <GridInfoDetail>
-                 <FlexRaiting>
-                     <RaitingTitle>
-                         Score 
-                         Raiting 
-                     </RaitingTitle>
-                     <ScoreTitle>{item.metacritic}</ScoreTitle>
-                 </FlexRaiting>
-                 <InfoItem>
-                     <About>About</About>
-                     <Description>{item.description}</Description>
+                            <ImgGalleryItem src={item.short_screenshots[2].image}/>
+                            <ImgGalleryItem src={item.short_screenshots[3].image}/>
+                            <ImgGalleryItem src={item.short_screenshots[4].image}/>
+                        </Gallery>
+                    </GridGalleryDetails>
+                </Column1>
+                <Column2>
+                    <GridInfoDetail>
+                    <FlexRaiting>
+                        <RaitingTitle>
+                            Score 
+                            Raiting 
+                        </RaitingTitle>
+                        <ScoreTitle>{item.metacritic}</ScoreTitle>
+                    </FlexRaiting>
+                    <InfoItem>
+                        <About>About</About>
+                        <Description>{item.description}</Description>
 {/*                      <FlexDeveloper>
                          <ContentInfo>Developer</ContentInfo>
                         {
@@ -63,13 +62,13 @@ const ItemDetail = ({item}) => {
                         }
 
                      </FlexPublisher> */}
-                     <FlexPrice>
-                         <ContentInfo>Price</ContentInfo>
-                         <ContentInfoR>${item.price}</ContentInfoR>
-                     </FlexPrice>
-                     <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
-                 </InfoItem>
-                 </GridInfoDetail>
+                        <FlexPrice>
+                            <ContentInfo>Price</ContentInfo>
+                            <ContentInfoR>${item.price}</ContentInfoR>
+                        </FlexPrice>
+                        <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                    </InfoItem>
+                    </GridInfoDetail>
                 </Column2>
             </ContainerDetailItem>
         </ContainerImage> 
