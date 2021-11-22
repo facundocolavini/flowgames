@@ -5,7 +5,7 @@
    Para esto se estará utilizando e implemento el uso de estados con REACT para la comunicación entre componentes, para mostrar su contenido será necesario consumir una API en la cual tenemos todos los juegos e información la información de cada juego.  
 
  
-![Captura](https://user-images.githubusercontent.com/54385792/141381070-4e91781b-9075-4d6f-85d9-fdb001cf8170.PNG)
+![Captura](file:///A:/Desktop/flowgames.gif)
 
 
 # API  
