@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Container} from '../../glogalStyles';
+import {Link} from 'react-router-dom';
 
 
 
@@ -281,6 +282,22 @@ export const BtnBuy = styled.button`
         background: #0f44ff;
     }
 `;  
+export const BtnToCart = styled(Link)`
+        background: ${({theme})=> theme.colors.background2};
+    border:none;
+    color: ${({theme})=> theme.fontColors.white};
+    width: fit-content;
+    padding: .5em 1em;
+    height: 40px;
+    line-height: 15px;
+    font-size: 20px;
+    border-radius:10px;
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.56));
+    &:hover {
+        transition: all .3s ease-in-out;
+        background: #0f44ff;
+    }
+`;
 
 export const InputQuantity = styled.input`
         height: 40px;

@@ -2,7 +2,7 @@ import {ThemeProvider} from 'styled-components';
 import { LandingHome } from './components/Home/LandingHome';
 import GlobalStyles from './glogalStyles';
 import React from 'react';
-
+import CartContext from './components/Contexts/CartContext';
 
 const theme = {
     colors: {
@@ -57,7 +57,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
+      <CartContext.Provider>
       <LandingHome/>
+      </CartContext.Provider>
     </ThemeProvider>  
   );
   

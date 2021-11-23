@@ -1,12 +1,15 @@
-import React from 'react'
-import {GridGalleryDetails,ContentInfoR,ContentInfo,FlexPrice,Description,About,GridInfoDetail,InfoItem,Gallery,ImgGalleryItem,ImgPrimary,ScoreTitle,RaitingTitle,FlexRaiting,FlexTitle,FlexDate,PlatformItem,TitleItem,DateItem,ContainerImage,ContainerDetailItem,Column1,Column2} from '../ItemDetailContainer/ItemDetailContainer.style';
+import React, { useState } from 'react'
+import {BtnToCart,GridGalleryDetails,ContentInfoR,ContentInfo,FlexPrice,Description,About,GridInfoDetail,InfoItem,Gallery,ImgGalleryItem,ImgPrimary,ScoreTitle,RaitingTitle,FlexRaiting,FlexTitle,FlexDate,PlatformItem,TitleItem,DateItem,ContainerImage,ContainerDetailItem,Column1,Column2} from './ItemDetail.style';
 import ItemCount from '../ItemCount/ItemCount';
-/* import backgroundImage from '../../assets/images/game.png'; */
 import  loading from '../../assets/images/loading.gif';
 import {Loading} from '../../glogalStyles';
+
 const ItemDetail = ({item}) => {
+    
+    const [itemCount,setItemCount] = useState(0);
     const onAdd = (q) => {
         alert("You selected " + q + " games.");
+        setItemCount(q);
     }
     return (
         <>
@@ -66,7 +69,12 @@ const ItemDetail = ({item}) => {
                             <ContentInfo>Price</ContentInfo>
                             <ContentInfoR>${item.price}</ContentInfoR>
                         </FlexPrice>
-                        <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                        {/* RETO 7 */}
+                        {
+                            itemCount === 0
+                            ?<ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                            :<BtnToCart to='/cart'>CHECK CART</BtnToCart>
+                        }
                     </InfoItem>
                     </GridInfoDetail>
                 </Column2>
