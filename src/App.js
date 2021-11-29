@@ -1,8 +1,13 @@
 import {ThemeProvider} from 'styled-components';
-import { LandingHome } from './components/Home/LandingHome';
+import {BrowserRouter , Routes,Route} from 'react-router-dom';
+import Navbar from "./components/Navbar/Navbar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Cart from "./components/Cart/Cart";
 import GlobalStyles from './glogalStyles';
 import React from 'react';
-import CartContext from './components/Contexts/CartContext';
+import CartContextProvider from './components/Contexts/CartContext';
+
 
 const theme = {
     colors: {
@@ -19,6 +24,7 @@ const theme = {
       regular:{
         fontSize:'1.375rem',
         fontWeight:'400',
+        fontStyle:'normal',
       },
       medium:{
         fontSize:'1.555555rem',
@@ -55,12 +61,20 @@ const theme = {
 function App() {
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles/>
-      <CartContext.Provider>
-      <LandingHome/>
-      </CartContext.Provider>
-    </ThemeProvider>  
+    <CartContextProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles/>
+          <BrowserRouter>
+            <Navbar/>
+              <Routes>
+                <Route path="/" element={<ItemListContainer/>}/>
+                <Route path="/genre/:idGenre" element={<ItemListContainer/>}/>
+                <Route path="/item/:idGame" element={<ItemDetailContainer/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+              </Routes>
+          </BrowserRouter>
+      </ThemeProvider>  
+    </CartContextProvider>
   );
   
 }

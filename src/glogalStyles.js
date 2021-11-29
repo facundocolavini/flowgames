@@ -11,14 +11,13 @@ const GlobalStyles = createGlobalStyle`
     body,html{
         font-size: 18px;
         font-family: 'DM Sans', sans-serif;
-     
+ 
         margin:0;
         padding:0;
         background-color:${({ theme }) => theme.colors.body};
         color: ${({ theme }) => theme.fontColors.white};
-        position: relative;
-        
-        height: 100vh;
+
+   
 
     }
     p{

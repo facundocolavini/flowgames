@@ -11,13 +11,19 @@ export const OutStock = styled.div`
     font-size: 20px;
     border-radius:10px;
     filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.56));
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
+        font-size: 12px;
+        
+
+    }
     
 `;
 export const ContainerCountItems = styled.div`
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-space-around;
+    justify-content:space-between;
     margin:1em 0;
+    
 `;
 
 export const BtnBuy = styled.button`
@@ -35,6 +41,14 @@ export const BtnBuy = styled.button`
         transition: all .3s ease-in-out;
         background: #0f44ff;
     }
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size: 14px;
+        text-align:center;
+    }
+    
 `;  
 
 export const InputQuantity = styled.div`
@@ -62,6 +76,7 @@ export const BtnAdd = styled.button`
         transition: all .3s ease-in-out;
         background: ${({theme})=> theme.colors.background2};
     }
+
 `;
 
 export const BtnSubstract = styled.button`
@@ -89,4 +104,5 @@ export const Stock = styled.div`
     font-size: 22px;
     text-align: right;
     margin:1em 0;
+
 `;

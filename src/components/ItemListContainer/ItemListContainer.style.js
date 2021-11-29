@@ -9,7 +9,7 @@ export const Title = styled.h1`
 export const WrapFlex = styled.div`
     display: flex;
     justify-content: space-between;
-    margin:${({ theme }) => theme.spacing.large.margin} 0 5em;
+    margin:8em 0 5em;
 `
 
 

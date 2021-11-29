@@ -1,16 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import {BtnToCart,GridGalleryDetails,ContentInfoR,ContentInfo,FlexPrice,Description,About,GridInfoDetail,InfoItem,Gallery,ImgGalleryItem,ImgPrimary,ScoreTitle,RaitingTitle,FlexRaiting,FlexTitle,FlexDate,PlatformItem,TitleItem,DateItem,ContainerImage,ContainerDetailItem,Column1,Column2} from './ItemDetail.style';
 import ItemCount from '../ItemCount/ItemCount';
 import  loading from '../../assets/images/loading.gif';
 import {Loading} from '../../glogalStyles';
+import { CartContext } from '../Contexts/CartContext';
 
 const ItemDetail = ({item}) => {
-    
     const [itemCount,setItemCount] = useState(0);
-    const onAdd = (q) => {
+    const test= useContext(CartContext);
+    
+
+
+    const onAdd = (q,inStock) => {
+        //Por esto implementamos el Context
+        console.log(q,'q'); 
+        console.log(inStock,'Instock'); 
+        if(q === 0) return;
         alert("You selected " + q + " games.");
         setItemCount(q);
+        test.addToCart(item,q,inStock);
     }
+
     return (
         <>
         {       
@@ -29,7 +39,6 @@ const ItemDetail = ({item}) => {
                          {/* Reemplazar con slider a futuro */}
                         <ImgPrimary src={item.short_screenshots[1].image}/>
                         <Gallery>
-
                             <ImgGalleryItem src={item.short_screenshots[2].image}/>
                             <ImgGalleryItem src={item.short_screenshots[3].image}/>
                             <ImgGalleryItem src={item.short_screenshots[4].image}/>
@@ -69,12 +78,12 @@ const ItemDetail = ({item}) => {
                             <ContentInfo>Price</ContentInfo>
                             <ContentInfoR>${item.price}</ContentInfoR>
                         </FlexPrice>
-                        {/* RETO 7 */}
                         {
                             itemCount === 0
                             ?<ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
                             :<BtnToCart to='/cart'>CHECK CART</BtnToCart>
                         }
+                        
                     </InfoItem>
                     </GridInfoDetail>
                 </Column2>

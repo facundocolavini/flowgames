@@ -1,13 +1,13 @@
 import React, {useState } from 'react'
-import {OutStock,Stock,InputQuantity,BtnBuy,BtnAdd,BtnSubstract,FlexQuantity,ContainerCountItems} from '../ItemCount/ItemCount.style';
+import {OutStock,InputQuantity,BtnBuy,BtnAdd,BtnSubstract,FlexQuantity,ContainerCountItems,Stock} from '../ItemCount/ItemCount.style';
 const ItemCount = ({stock ,initial,onAdd}) => {
     const [count, setCount] = useState(0);
     const [onStock, setOnStock] = useState(stock);
     const [outStock, setOutStock] = useState(false);
 
 
+
     const increment = () => {
-        console.log(stock,'STOCK')
         if (count < stock) {
             setCount(count + 1);
             setOnStock(onStock-1);
@@ -22,7 +22,6 @@ const ItemCount = ({stock ,initial,onAdd}) => {
             setOnStock(onStock+1);
             setOutStock(false);
         }
-
     }
     return (
         <>
@@ -31,14 +30,16 @@ const ItemCount = ({stock ,initial,onAdd}) => {
                     {
                         outStock
                         ? <OutStock>NO STOCK</OutStock>
-                        :<BtnBuy onClick={() => onAdd(count)}>GET NOW</BtnBuy>
+                        : <BtnBuy onClick={() => onAdd(count,onStock)}>GET NOW</BtnBuy>
                     }
                         <BtnAdd onClick={increment}>+</BtnAdd>
                         <InputQuantity>{count}</InputQuantity>
                         <BtnSubstract onClick={decrement}>-</BtnSubstract>
+                        
                 </FlexQuantity>
             </ContainerCountItems>
-                <Stock>Stock:{onStock}</Stock>
+                <Stock>Stock: {onStock}</Stock> 
+                
 
         </>
     )

@@ -43,6 +43,7 @@ export const ContainerDetailItem = styled(Container)`
     grid-template-columns: 60% 40%;
     height: 100vh;
     grid-gap: 5em 5px;
+
     margin-top: 5rem;
     grid-template-areas:
         "gallery info";
@@ -52,6 +53,7 @@ export const ContainerDetailItem = styled(Container)`
         grid-template-columns: 1fr;
             align-items: flex-end;
         grid-gap: 1em;
+        justify-content: center;
         grid-template-areas:
         "gallery" 
         "info";
@@ -77,6 +79,7 @@ export const FlexDate = styled.div`
     display:flex;
     margin-bottom: 1em;
     align-items: center;
+    flex-wrap: wrap;
     
 `;
 export const DateItem = styled.div`
@@ -98,8 +101,7 @@ export const DateItem = styled.div`
 export const PlatformItem = styled.div`
     font-style: normal;
     font-weight: normal;
-    display: flex;
-    flex-wrap: wrap;
+
     font-size: 14px;
     margin: 0.3em;
     line-height: 15px;
@@ -110,12 +112,15 @@ export const PlatformItem = styled.div`
 `;
 export const FlexTitle = styled.div`
     grid-area: detailTitle;
-    display:flex;
+    display:grid;
+    width: 100%;
     align-items: center;
     
 `;
 export const TitleItem = styled.div`
-    font-size: 4.5rem;
+    display:grid;
+
+    font-size: 3rem;
     font-style: normal;
     font-weight: bold;
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
@@ -157,7 +162,7 @@ export const Column2 = styled.div`
 `;
 export const GridInfoDetail = styled.div`
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 0em;
     grid-template-areas:
     "ratigin"
     "about";
@@ -171,7 +176,7 @@ export const FlexRaiting = styled.div`
     word-wrap: break-word;
     line-height: 20px;
     overflow-wrap: normal;
-    height: 180px;
+    height: 130px;
     
 `;
 
@@ -180,6 +185,9 @@ export const RaitingTitle = styled.div`
     font-weight: 500;
     font-size: 35px;
     line-height: 15px;
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
+        font-size: 25px;
+    }
 `;
 
 export const ScoreTitle = styled.div`
@@ -188,6 +196,9 @@ font-weight: bold;
 font-size: 72px;
 line-height: 15px;
 height: fit-content;
+@media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
+        font-size:30px;
+    }
 `;
 
 
@@ -210,7 +221,7 @@ export const About = styled.div`
 
 export const Description = styled.div`
     font-weight: normal;
-    font-size: 26px;
+    font-size: 20px;
     margin-bottom:1em;
 
     height: 35%;
@@ -281,6 +292,7 @@ export const BtnBuy = styled.button`
         transition: all .3s ease-in-out;
         background: #0f44ff;
     }
+
 `;  
 export const BtnToCart = styled(Link)`
         background: ${({theme})=> theme.colors.background2};
@@ -351,3 +363,4 @@ export const Stock = styled.div`
     text-align: right;
     margin:1em 0;
 `;
+
