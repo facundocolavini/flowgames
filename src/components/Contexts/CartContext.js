@@ -1,36 +1,49 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
+    const [newCartVal, setnewCartVal] = useState([]);
+
     //Helpers
-    const addToCart = (item, q ,inStock) => {
+    const addToCart = (item, q) => {
         let inCart = isInCart(item);
         if (inCart === undefined) {
             setCartList([
                 ...cartList,
                 //Producto nuevo en mi carrito
                 {
+                    
                     idItem: item.id,
                     imageItem: item.background_image,
                     nameItem: item.name,
                     priceItem: item.price,
-                    quantityItem: q,
-                    stockItem: inStock,
-                    shippingItem: Math.round(Math.floor(Math.random() * 40))
+                    shippingItem: Math.round(Math.floor(Math.random() * 40)),
+                    quantityItem: q
                 }
             ])
         }else{
-            inCart.quantityItem += q;
+
             //Hacer un Toast de que se agrego al carrito y que ya existe en el carrito
-             let confirmation = window.confirm('You have this game on your cart,do you have to add another one?');
+            let confirmation = window.confirm('You have this game on your cart,do you have to add another one?');
             if (confirmation){
-                inCart.quantity += q;
+                //No se actualiza en el carrito
+                let newValue = inCart.quantityItem += q;
+                for(const itemCart in cartList){
+                    if(cartList[itemCart].idItem === item.id){
+                        cartList[itemCart].quantityItem = newValue;
+                    }
+                }   
+                setCartList([...cartList]);
             }
         }
     }   
+
+
+
+
     const isInCart = (item) => {
         return cartList.find(product => product.idItem === item.id);
     }
@@ -58,7 +71,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const costShipping = () => {
-        return cartList.map(product =>  product.shippingItem).reduce((total,nextItem) => total + nextItem,0);
+        return cartList.map(inCart =>  inCart.shippingItem).reduce((total,nextItem) => total + nextItem,0);
       
     }
 
@@ -84,14 +97,17 @@ const CartContextProvider = ({children}) => {
         return subTotal() + costShipping();
     }
 
+    const productsQty = () => {
+        let qtys = cartList.map(item => item.quantityItem).reduce((total, nextItem) => total + nextItem, 0);
+        return qtys;
+    }
     const finishBuy = (e) => {
         alert('Thank you for your purchase');
         clean();
        
     }
-/*     console.log(subTotal(),'subTotal');
-    console.log(costShipping(),'shipping');
-    console.log(total(),'total'); */
+
+    console.log(productsQty(),'productsQty');
     return(
         <CartContext.Provider value={{
             cartList,
@@ -105,6 +121,7 @@ const CartContextProvider = ({children}) => {
             costShipping,
             subTotal,
             total,
+            productsQty,
             finishBuy
         }}>
             {children}

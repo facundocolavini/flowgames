@@ -21,7 +21,7 @@ export const ContainerImage = styled.div`
         position: absolute;
         box-sizing: content-box;
         display: flex;
-        padding:6em 0;
+        padding:8em 0;
         bottom: 0px;
         width: 100%;
         height: 100vh;

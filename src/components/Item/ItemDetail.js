@@ -14,11 +14,11 @@ const ItemDetail = ({item}) => {
     const onAdd = (q,inStock) => {
         //Por esto implementamos el Context
         console.log(q,'q'); 
-        console.log(inStock,'Instock'); 
+/*         console.log(inStock,'Instock');  */
         if(q === 0) return;
         alert("You selected " + q + " games.");
         setItemCount(q);
-        test.addToCart(item,q,inStock);
+        test.addToCart(item,q);
     }
 
     return (
@@ -80,7 +80,7 @@ const ItemDetail = ({item}) => {
                         </FlexPrice>
                         {
                             itemCount === 0
-                            ?<ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                            ?<ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
                             :<BtnToCart to='/cart'>CHECK CART</BtnToCart>
                         }
                         

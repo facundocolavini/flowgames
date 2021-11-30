@@ -27,8 +27,6 @@ const ItemListContainer = () => {
             titleGenre(idGenre);
     }, [idGenre]);
 
-
-        console.log('ItemListContainer');
     return (
         <Container>
             <WrapFlex>

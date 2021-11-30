@@ -1,6 +1,7 @@
 import {useState, React} from 'react'
 import logo from '../../assets/icons/logo.svg';
-import { Nav,NavContainer,NavLink,Bars,NavMenu,Close} from './Navbar.style';
+import CartWidget from '../Cart/CartWidget';
+import { Nav,NavContainer,NavLink,Bars,NavMenu,Close,CartIcon} from './Navbar.style';
 
 const Navbar = () => {
 
@@ -20,7 +21,7 @@ const Navbar = () => {
                     <NavLink to="/genre/4">Action</NavLink>
                     <NavLink to="/genre/2">Shooter</NavLink>
                     <NavLink to="/genre/3">Adventure</NavLink>
-                    <NavLink to="/cart" >Cart</NavLink>
+                    <NavLink to="/cart" ><CartIcon/><CartWidget/></NavLink>
                 </NavMenu>
             </NavContainer>
         </Nav>
