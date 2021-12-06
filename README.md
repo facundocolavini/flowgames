@@ -1,6 +1,6 @@
 ## Flow Games! Tienda de videojuegos 
 
-   Realizo una tienda online con el tema videojuegos donde vamos a poder comprar muchas variedades de juegos. 
+   Realizo una tienda online con el tema videojuegos donde vamos a poder comprar muchas variedades de juegos. Tendremos varias funcionalidades como cualquier tienda online 
 
    Se implemento el uso de estados con REACT para la comunicación entre componentes.Para mostrar su contenido será necesario consumir una base de datos en la cual tenemos todos los juegos.La información de cada juego estara almacenada en FIREBASE Cloud Firestore.  
 
@@ -9,11 +9,12 @@
 
 
 # API  
-
-   API [RAWG](https://rawg.ioapidocs) 
+   Me inspire en esta api con la variedad de informacion y de cantidad de juegos.
+   
+   API:  [RAWG](https://rawg.io/) 
 
 # Requisitos 📋 
-
+  Se deben tener conocimientos con:
 ###### Librerías y tecnologías 
 
     Git 
@@ -21,6 +22,8 @@
     npm 
 
     React 
+    
+    Firebase
 
     JavaScript 
 
@@ -44,3 +47,9 @@
    Librería [REACT](https://reactjs.org) 
 
    Estilos [STYLED COMPONENTS](https://styled-components.com/) 
+   
+   Almacenamiento y consulta [FIREBASE](https://firebase.google.com/) 
+   
+   
+# Comandos de Ejecucion 
+   `npm start`
