@@ -8,8 +8,9 @@ Flowgames es una aplicación de juegos realizada para el curso de React de Coder
 
 
 # Referencias  
-   Inspirado en el diseño de RAWG arme mi diseño en Figma para llevarlo a algo real.
-   [RAWG](https://rawg.io/) 
+  Inspirado en la página RAWG construí mi propio diseño en Figma para llevarlo a algo real. 
+  
+  [RAWG](https://rawg.io/) 
 
 # Requisitos 📋 
   Se deben tener conocimientos con:
