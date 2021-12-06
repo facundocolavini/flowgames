@@ -11,12 +11,8 @@ const ItemDetail = ({item}) => {
     
 
 
-    const onAdd = (q,inStock) => {
-        //Por esto implementamos el Context
-        console.log(q,'q'); 
-/*         console.log(inStock,'Instock');  */
+    const onAdd = (q) => {
         if(q === 0) return;
-        alert("You selected " + q + " games.");
         setItemCount(q);
         test.addToCart(item,q);
     }
@@ -31,17 +27,18 @@ const ItemDetail = ({item}) => {
                     <GridGalleryDetails>
                         <FlexDate>
                             <DateItem>{item.released}</DateItem>
-                            {item.platforms.map(platform=><PlatformItem key={platform.platform.id} >|{platform.platform.name}|</PlatformItem>)}
+                         {/*    {item.platforms.map((index,platform)=><PlatformItem key={platform.id} >|{platform.name}|</PlatformItem>)} */}
+                            {item.platforms.map((platform , index) => <PlatformItem key={index} >|{platform}|</PlatformItem>)}
                         </FlexDate>
                         <FlexTitle>
                             <TitleItem>{item.name}</TitleItem>
                         </FlexTitle>
                          {/* Reemplazar con slider a futuro */}
-                        <ImgPrimary src={item.short_screenshots[1].image}/>
+                        <ImgPrimary src={item.short_screenshots[0]}/>
                         <Gallery>
-                            <ImgGalleryItem src={item.short_screenshots[2].image}/>
-                            <ImgGalleryItem src={item.short_screenshots[3].image}/>
-                            <ImgGalleryItem src={item.short_screenshots[4].image}/>
+                            <ImgGalleryItem src={item.short_screenshots[1]}/>
+                            <ImgGalleryItem src={item.short_screenshots[2]}/>
+                            <ImgGalleryItem src={item.short_screenshots[3]}/>
                         </Gallery>
                     </GridGalleryDetails>
                 </Column1>

@@ -34,13 +34,10 @@ const ItemCount = ({stock ,initial,onAdd}) => {
                     }
                         <BtnAdd onClick={increment}>+</BtnAdd>
                         <InputQuantity>{count}</InputQuantity>
-                        <BtnSubstract onClick={decrement}>-</BtnSubstract>
-                        
+                        <BtnSubstract onClick={decrement}>-</BtnSubstract>      
                 </FlexQuantity>
             </ContainerCountItems>
-                <Stock>Stock: {onStock}</Stock> 
-                
-
+            <Stock>Stock: {onStock}</Stock>     
         </>
     )
 }

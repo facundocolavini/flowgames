@@ -18,9 +18,9 @@ const Navbar = () => {
                 </NavLink>
                 {isOpen ?<Close onClick={()=>clickHandler(!isOpen)}/>:<Bars onClick={()=>clickHandler(!isOpen)}/>} 
                 <NavMenu isOpen={isOpen}>
-                    <NavLink to="/genre/4">Action</NavLink>
-                    <NavLink to="/genre/2">Shooter</NavLink>
-                    <NavLink to="/genre/3">Adventure</NavLink>
+                    <NavLink to="/genre/aTX6ncjEf0TtFEul6eGp">Action</NavLink>
+                    <NavLink to="/genre/88vWH3X4UqApy6SOJrf0">Shooter</NavLink>
+                    <NavLink to="/genre/2SmRUXYcG3MpKFPSDQ9C">Adventure</NavLink>
                     <NavLink to="/cart" ><CartIcon/><CartWidget/></NavLink>
                 </NavMenu>
             </NavContainer>

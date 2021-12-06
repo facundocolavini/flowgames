@@ -1,11 +1,10 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
 
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
-    const [newCartVal, setnewCartVal] = useState([]);
 
     //Helpers
     const addToCart = (item, q) => {
@@ -13,9 +12,8 @@ const CartContextProvider = ({children}) => {
         if (inCart === undefined) {
             setCartList([
                 ...cartList,
-                //Producto nuevo en mi carrito
+                //Its a new item on cart
                 {
-                    
                     idItem: item.id,
                     imageItem: item.background_image,
                     nameItem: item.name,
@@ -25,24 +23,15 @@ const CartContextProvider = ({children}) => {
                 }
             ])
         }else{
-
             //Hacer un Toast de que se agrego al carrito y que ya existe en el carrito
             let confirmation = window.confirm('You have this game on your cart,do you have to add another one?');
             if (confirmation){
-                //No se actualiza en el carrito
-                let newValue = inCart.quantityItem += q;
-                for(const itemCart in cartList){
-                    if(cartList[itemCart].idItem === item.id){
-                        cartList[itemCart].quantityItem = newValue;
-                    }
-                }   
+                //add quantity for the same item and update cart
+                inCart.quantityItem += q;
                 setCartList([...cartList]);
             }
         }
     }   
-
-
-
 
     const isInCart = (item) => {
         return cartList.find(product => product.idItem === item.id);
@@ -72,7 +61,6 @@ const CartContextProvider = ({children}) => {
 
     const costShipping = () => {
         return cartList.map(inCart =>  inCart.shippingItem).reduce((total,nextItem) => total + nextItem,0);
-      
     }
 
     const substractProductOnCart = (quantityItem,idItem) => {
@@ -107,7 +95,6 @@ const CartContextProvider = ({children}) => {
        
     }
 
-    console.log(productsQty(),'productsQty');
     return(
         <CartContext.Provider value={{
             cartList,

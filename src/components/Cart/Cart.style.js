@@ -112,6 +112,13 @@ export const ListProductsContainer = styled.div`
     padding: 2em;
     background-color: ${({ theme }) => theme.colors.background1};
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    &::-webkit-scrollbar {
+       width: 0.5em; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.colors.background2}; 
+        border-radius: 10px;
+    }
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}){
         padding:1em;
     }
