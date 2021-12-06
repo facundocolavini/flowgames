@@ -28,7 +28,7 @@ const ItemListContainer = () => {
             .then(result => setGames(result))
             .catch(err => console.log(err))
              */
-            /* Reto clase 12 */
+            /* Reto clase 12 */ 
             getAllGames(idGenre)
             .then(result =>setGames(result))
             .then(result=> titleGenre(idGenre,result))
