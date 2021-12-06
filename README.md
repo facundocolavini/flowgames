@@ -1,6 +1,7 @@
-## Flow Games! Tienda de videojuegos 
+# Flow Games!  
+Flowgames es una aplicación de juegos realizada para el curso de React de Coderhouse , donde se implementaron patrones, diseño y funcionalidades para avanzar día a día con los retos requeridos del curso. 
 
-   Se implemento el uso de estados con REACT para la comunicación entre componentes. Para mostrar su contenido será necesario consumir una base de datos en la cual tenemos todos los juegos. La información de cada juego estará almacenada en FIREBASE Cloud Firestore. 
+   Se implemento el uso de estados con REACT para la comunicación entre componentes. Para mostrar su contenido será necesario consumir una base de datos en la cual tenemos todos los juegos. La información de cada juego estará almacenada en FIREBASE Cloud Firestore con el esquema serveless computing/cloud-first. 
 
  
 ![Captura](https://user-images.githubusercontent.com/54385792/141381070-4e91781b-9075-4d6f-85d9-fdb001cf8170.PNG)
