@@ -10,7 +10,7 @@
 
 # API  
 
-    API [RAWG](httpsrawg.ioapidocs) 
+   API [RAWG](https://rawg.ioapidocs) 
 
 # Requisitos 📋 
 
@@ -41,6 +41,6 @@
  
 # Construido con 🛠️ 
 
-   Librería [REACT](httpsreactjs.org) 
+   Librería [REACT](https://reactjs.org) 
 
    Estilos [STYLED COMPONENTS](https://styled-components.com/) 
