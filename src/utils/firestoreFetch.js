@@ -1,4 +1,4 @@
-import {query,orderBy ,where , collection, getDocs,doc,getDoc} from "firebase/firestore";
+import {query,orderBy ,where , collection, getDocs,doc,getDoc,setDoc ,updateDoc,increment} from "firebase/firestore";
 import db from './firebaseConfig';
 
 export const getAllGames = async(idGenre)=>{
@@ -34,3 +34,27 @@ export const GetOne = async (idItem) => {
     }
 }
 
+
+//Add a new Item on my Document 
+export const AddItem = async (newValue) =>{
+    const newDocRef = doc(collection(db, 'orders'));
+    await setDoc(newDocRef,newValue);
+    return newDocRef;
+}
+
+//Update a propierti on a document
+export const UpdateItem = async (idValue,updateValue)=>{
+        const itemRef = doc(db,"games",idValue);
+        await updateDoc(itemRef,updateValue)
+   
+}
+
+
+export const UpdateStock = async (idValue,keyUpdate,valueUpdate)=>{
+    const itemRef = doc(db,"games",idValue);
+    await updateDoc(itemRef,{ [keyUpdate]: increment(-valueUpdate)})
+   
+}
+
+ 
+ 

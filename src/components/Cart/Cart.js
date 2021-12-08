@@ -2,10 +2,42 @@ import React, { useContext } from 'react';
 import { CartContext} from '../Contexts/CartContext';
 import {ContainerCart,TitleCart,Btns,BtnShop,BtnClearCart,ContentCart,ListProductsContainer,SummaryContainer,Product,ProductDetails,ImageProduct,ProductDetail,DetailsRowTop,WrapperTexts,TextDescription,TextValue,WrapperTotal,DetailsRowBot,BtnDelete,ProductQuantity,BtnAddProduct,BtnSubstractProduct,InputQ,WrapperSummary,SummarySubTotalFlex,TextSummaryBold,TextSummaryValue,SummaryShippingFlex,WrapperSummaryTotal,TextSummaryBoldTotal,TextSummaryValueTotal,BtnFinishBuy} from './Cart.style';
 /* import game from '../../assets/images/game.png'; */
+import {AddItem,UpdateStock} from '../../utils/firestoreFetch';
+
+
 
 const Cart = () => {
     const test = useContext(CartContext);
-
+    const createOrder = ()=>{
+        let order = {
+            buyer:{
+                //Elementos del form 
+                name: 'Diego',
+                email: 'dpa@hotmail.com',
+                phone: '12356678'
+            },
+            items: test.cartList.map(element =>({
+                id:element.idItem,
+                title:element.nameItem,
+                qty:element.quantityItem,
+                shipping:element.shippingItem,
+                price:element.priceItem
+            })),
+            date:new Date(),
+            total: test.total()
+        }; 
+        AddItem(order)
+            .then(result => alert(result.id))
+            .catch(err => console.log(err));
+        
+        test.cartList.forEach(async(item)=>{
+            if(item.quantityItem === 0 && item.quantityItem <0){
+                UpdateStock(item.idItem,"stock",item.quantityItem)
+            }else{         UpdateStock(item.idItem,"stock",0)}
+        })
+        
+        test.clean();
+    }
     return (
         <ContainerCart>
             <TitleCart>My Cart</TitleCart>
@@ -94,7 +126,7 @@ const Cart = () => {
                     </WrapperSummaryTotal>
                     {
                         (test.cartList.length > 0)&&
-                        <BtnFinishBuy onClick={()=>test.finishBuy()}>FINISH BUY</BtnFinishBuy>
+                        <BtnFinishBuy onClick={createOrder}>FINISH BUY</BtnFinishBuy>
                     }
                 </SummaryContainer>
             </ContentCart>

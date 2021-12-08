@@ -12,13 +12,9 @@ const ItemListContainer = () => {
     const [allGames, setGames] = useState([]);
     const [titleSection, setTitleSection] = useState('');
     const { idGenre } = useParams();
-    console.log(idGenre,'cate');
 
-    const titleGenre = (idGenre,data) => {
-        if (idGenre === undefined) return  setTitleSection('All Games');    
-        return setTitleSection(data.filter(item => item.id === idGenre ? item.genreName : null));
-    }
-    
+
+
     //componentDidUpdate
       useEffect(() => {
 /*           customFetch(0, data.filter(item => {
@@ -29,9 +25,16 @@ const ItemListContainer = () => {
             .catch(err => console.log(err))
              */
             /* Reto clase 12 */ 
+            const titleGenre = (idGenre) => {
+                if (idGenre === undefined) return  setTitleSection('All Games');    
+                return setTitleSection(idGenre.toUpperCase());
+            }
+            
             getAllGames(idGenre)
+    
             .then(result =>setGames(result))
-            .then(result=> titleGenre(idGenre,result))
+            .then(result=>console.log(result))
+            .then(titleGenre(idGenre))
             .catch(err => console.log(err))
            
     }, [idGenre]);

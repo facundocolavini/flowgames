@@ -8,8 +8,6 @@ import { CartContext } from '../Contexts/CartContext';
 const ItemDetail = ({item}) => {
     const [itemCount,setItemCount] = useState(0);
     const test= useContext(CartContext);
-    
-
 
     const onAdd = (q) => {
         if(q === 0) return;
@@ -21,7 +19,7 @@ const ItemDetail = ({item}) => {
         <>
         {       
             item && item.name ?
-             <ContainerImage backImg={item.background_image} alt="asdsa">  
+             <ContainerImage backImg={item.background_image} alt={item.name}>  
              <ContainerDetailItem>
                 <Column1>
                     <GridGalleryDetails>
