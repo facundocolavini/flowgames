@@ -6,6 +6,8 @@ Flowgames es una aplicación de juegos realizada para el curso de React de Coder
  
 ![Captura](https://user-images.githubusercontent.com/54385792/141381070-4e91781b-9075-4d6f-85d9-fdb001cf8170.PNG)
 
+# Deploy 
+  https://flowgames.netlify.app/
 
 # Referencias  
   Inspirado en la página RAWG construí mi propio diseño en Figma para llevarlo a algo real. 
