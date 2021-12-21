@@ -4,7 +4,6 @@ import {Title,WrapFlex} from './ItemListContainer.style';
 /* import customFetch from '../../utils/customFetch'; */
 import {Container} from '../../glogalStyles';
 import  ItemList from '../ItemsList/ItemList';
-/* import { CartContext } from '../../CartContext'; */
 /* const {data}  = require('../../utils/games'); */
 import {getAllGames} from '../../utils/firestoreFetch';
 

@@ -19,13 +19,14 @@ export const getAllGames = async(idGenre)=>{
         return dataFromfirestore;
 }
 
-export const GetOne = async (idItem) => {
-    const docRef = doc(db, "games", idItem);
+export const GetOne = async (idGame) => {
+    const docRef = doc(db, "games", idGame);
     const docSnap = await getDoc(docRef);
     
     if (docSnap.exists()) {
       return {
-          id: idItem,
+          slug: idGame,
+          id: idGame,
           ...docSnap.data()
       }
     } else {
